@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Checkout</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h1>Finalizar pedido</h1>
+
+<form onsubmit="event.preventDefault();alert('Pedido simulado realizado');localStorage.clear();location.href='index.html'">
+  <input placeholder="Nombre completo" required><br><br>
+  <input placeholder="Dirección" required><br><br>
+  <input placeholder="Ciudad" required><br><br>
+  <button>Confirmar pedido</button>
+</form>
+
+</body>
+</html>
