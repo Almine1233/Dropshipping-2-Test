@@ -1,1 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Producto</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/products.js"></script>
+<script src="js/cart.js" defer></script>
+</head>
+<body>
 
+<div id="productDetail"></div>
+
+<script>
+const params=new URLSearchParams(window.location.search);
+const id=parseInt(params.get("id"));
+const p=products.find(x=>x.id===id);
+document.getElementById("productDetail").innerHTML=`
+  <div class="product-card">
+    <img src="${p.image}">
+    <h1>${p.name}</h1>
+    <p>${p.desc}</p>
+    <div class="price">$${p.price}</div>
+    <button onclick="addToCart(${p.id})">Añadir al carrito</button>
+  </div>`;
+</script>
+
+</body>
+</html>
